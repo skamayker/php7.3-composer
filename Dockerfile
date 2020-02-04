@@ -10,6 +10,7 @@ RUN apt-get update \
         libicu-dev \
         g++ \
         git \
+        libpng-dev\
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean \
     && docker-php-ext-install \
@@ -20,6 +21,7 @@ RUN apt-get update \
         pdo_mysql \
         bcmath \
         opcache \
+        gd \
     && pecl install \
         apcu \
         igbinary \
